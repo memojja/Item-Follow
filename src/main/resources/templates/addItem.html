@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Item Follow</title>
+</head>
+<body>
+<nav role="navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/items">Items</a></li>
+    </ul>
+</nav>
+
+
+<form action="#" th:action="@{/items}" th:object="${item}" th:method="post">
+    <input type="text" th:field="*{type}"  th:value="*{type}" />
+    <input type="text" th:field="*{amount}" th:value="*{amount}" />
+    <td><button type="submit">Add</button></td>
+
+</form>
+
+</body>
+</html>
+
