@@ -18,6 +18,10 @@ public class Item {
     @Column(name = "amount")
     private String amount;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public Item() {
 
     }

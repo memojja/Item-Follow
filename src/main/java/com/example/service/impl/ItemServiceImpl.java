@@ -3,6 +3,7 @@ package com.example.service.impl;
 import com.example.dao.ItemDao;
 import com.example.model.Item;
 import com.example.service.ItemService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,6 +15,7 @@ public class ItemServiceImpl implements ItemService {
     private final ItemDao itemDao;
 
 
+    @Autowired
     public ItemServiceImpl(ItemDao itemDao) {
         this.itemDao = itemDao;
     }
